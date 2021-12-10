@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>Practice DOM</title>
+    <style>
+        #pic{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(0, 47, 255);
+        }
+        .butt{
+            color:rgb(6, 80, 18)
+             }
+    </style>
+</head>
+<body>
+<h1 id="pic">This is the first heading...click below for something cool:</h1>
+<button class="butt" onclick="document.getElementById('pic').innerHTML = 'The wording has Changed!'">Click Here</button>
+
+<h2 id="pic2">This is the second heading...click below:</h2>
+<button class="butt" onmouseover="document.getElementById('pic2').innerHTML= 'This line changed also!'">Mouse Over</button>
+
+<div id="pic3">
+    <h3 class='pic4'>Group Heading 1</h3>
+    <h3 class='pic4'>Group Heading 2</h3>
+    <h3 class='pic4'>Group Heading 3</h3>
+    <button class="butt" onclick="document.getElementById('pic3').innerHTML= divGroup()">Click Here</Press>
+</div>
+
+<p>Enter the right letter in the box to trigger a message.</p>
+<input type="text" onkeydown="myFunction()">
+
+<p>turn on and off light bulb</p>
+<img id="myImage" src="https://freepngimg.com/thumb/bulb/31669-1-bulb-off-transparent-image.png" style="width:3em">
+<button class="butt" onclick="document.getElementById('myImage').src='https://previews.123rf.com/images/murika/murika1511/murika151100069/48123160-bright-glowing-incandescent-light-bulb-on-a-white-background.jpg'">Turn on the light.</button>
+
+<p>Click below to make changes:</p>
+<button class="butt" onclick="document.getElementById('pic3').style.display ='none'">Click here</button>
+<script>
+    function divGroup(){
+        a = 'All';
+        b = 'Headings';
+        c= 'Have Changed!'
+        sum = a + b + c;
+        return sum;
+    }
+
+    function myFunction(){
+        let key = event.keyCode;
+        if (key >= 65 && key <=73){
+        alert('You entered the right letter')
+         } else{
+        alert('You did not enter the right letter')}
+    }
+</script>
+
+</body>

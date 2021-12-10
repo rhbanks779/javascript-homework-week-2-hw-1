@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+<title>practice arrow functions</title>
+</head>
+
+<body>
+<p id="greeting"></p>
+<br>
+
+<p>It is <span id="weather">!</p>
+<br>
+
+<p><button>Please Enter Temp</button></p>
+<p id="enterTemp"></p>
+<p id="tempResp"></p>
+
+<script>
+
+const greet = (message="Hello world!") => message;
+console.log(greet)
+document.getElementById("greeting").innerText=greet();
+
+const phraseOne = (phrase='raining') => phrase;
+console.log('it is' + phraseOne());
+document.getElementById("weather").innerHTML=phraseOne();
+
+let temp = Number(prompt('enter temperature: '));
+const howsItFeeling = (input) => {
+    if (input >= 72){
+    console.log('it is hot!');
+}
+else if (input <= 40){
+    console.log('it is cold!');
+}
+ else{
+     console.log("It is normal!")
+ }
+}
+howsItFeeling(temp);
+
+ document.getElementById("enterTemp").innerHTML=temp();
+ document.getElementById("tempResp").innerHTML=howsItFeeling(temp);
+
+  const userTemps=Number(prompt('Please enter temp: '))
+  const variousTemps=[]
+for(i=0; i<=variousTemps.length; i++){
+    
+
+}
+</script>
+
+</body>

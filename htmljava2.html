@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>Practice JS</title>
+    <!---<script src="javascript/jscode1.js"></script>-->
+</head>
+
+<body>
+<p>Calculate the area of a circle<br></p>
+<p id='rad'></p>
+
+<br>
+<p>Calculate the third side of a triangle.<br>
+Please enter side a: <br>
+Please enter side b: </p>
+<p id="tri"></p>
+<br>
+<p>This is an example of hoisting!</p>
+ 
+<script>
+    alert('Is this working yet?');
+    let radius= Number(prompt('enter radius: '));
+
+function getArea(radius){
+    let result= (3.14 * radius * radius);
+    console.log(result);
+    }
+    getArea(radius)
+    
+document.getElementById('rad').innerHTML=`Area equals: ${getArea(result)}`;
+
+let triSideOne=Number(prompt('enter side 1: '));
+let triSideTwo=Number(prompt('enter side 2: '));
+let x= ((triSideOne * triSideOne) + (triSideTwo * triSideTwo));
+
+function getSide(x){
+    let result= Math.sqrt(x);
+    console.log(result);
+}
+getSide(x);
+document.getElementById('tri').innerHTML=`Result: ${getSide(x)}`;
+
+hoistEx();
+
+function hoistEx(){
+    console.log('This is a hoisting example')
+}
+
+</script>
+
+</body>
+</html>

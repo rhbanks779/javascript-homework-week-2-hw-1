@@ -1,0 +1,79 @@
+<!--Practice putting javascript inside html code-->
+<!DOCTYPE html>
+<head>
+    <title>practice html/js</title>
+    <style>
+        #pract{
+            color: blue;
+            font-size: large;
+        }
+        #pract2{
+            color: red;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        </style>
+</head>
+<body>
+
+    <p id="pract">"Hellow World!"</p>
+    <p id="pract2">'More'</p>
+    
+   <p class="calculator">Pick an operation to run for 6 and 3:</p>
+        <div><button>Add</button></div>
+        <div><button>Subtract</button></div>
+        <div><button>Multiply</button></div>
+        <div><button>Divide</button></div>
+    
+
+<script>
+
+let correct="Hello World!"
+let correct2="More Practice with JS!"
+
+myArray=correct.split("")
+myArray2=correct2.split("")
+document.getElementById('pract').innerHTML=myArray
+
+document.getElementById('pract2').innerHTML=myArray2
+console.log(myArray2);
+
+//function example (){
+  //  return 2+2
+//}
+//console.log(example())
+
+let calculator = require('prompt-sync')();
+let num = prompt('enter a number 1-5: ');
+let num1 = 6;
+let num2 = 3; 
+function add(){
+    console.log('6 + 3 = ' + (num1 + num2))
+}
+function subtract(){
+    console.log('6 - 3 = ' + (num1 - num2))
+}
+function multiply(){
+    console.log('6 * 3 = ' + (num1 * num2))
+}
+function divide(){
+    console.log('6 / 3 = ' + (num1 / num2))
+}
+switch (num){
+    case '1' : add()//console.log('6 + 3 = ' + (num1 + num2))
+        break;
+    case '2': subtract()//console.log('6 - 3 = ' + (num1 - num2))
+        break;
+    case '3': multiply()//console.log('6 * 3 = ' + (num1 * num2))
+        break;
+    case '4': divide()//console.log('6 / 3 = ' + (num1 / num2))
+        break;
+    default : console.log('Invalid Option');
+}
+//use onclick to have buttons interact
+</script>
+
+</body>
+</html>
+
+  

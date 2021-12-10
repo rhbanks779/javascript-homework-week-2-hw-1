@@ -61,3 +61,41 @@ for (i=0; i < 4; i++){
     console.log(x)
 }
 //console.log(x)
+
+//.split
+//example with adding html
+/*<html>
+<head>  <title>String Methods
+    </title></head>
+<body>
+<p id="para1"></p>
+<script>//javascript goes inside script tag
+    var name='John';
+    let str ='Hellow how are you?';
+    
+    myArr1=name.split();
+    document.getElementById('para1').innerHTML=myArr1
+    console.log(myArr1)
+
+    myArr = str.split(" ")
+</script>
+
+</body>
+</html>
+
+/*Functions
+function example(){
+    console.log('This is an example.')
+}
+//to execute a function you must call/invoke it!
+example();
+
+function sum (){
+    return 1+1//return will give you the valure of what is in code block
+}
+console.log(sum())
+*/
+
+function example(){
+    
+}

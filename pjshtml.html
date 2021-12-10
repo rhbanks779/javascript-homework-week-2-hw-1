@@ -1,0 +1,25 @@
+<! DOCTYPE html>
+<!--DOM example--> 
+<html>
+    <body>
+        <h1>What can Javascript do?</h1>>
+        <p id="banana">Javascript can change the content in HTML page.</p>
+        <button type="button" onclick="document.getElementById('banana').innerHTML='Javascript is Life!'">Click Me!</button>
+        
+        <ul id="menu">
+            <li class="item">HTML</li>
+            <li class="item">CSS</li>
+            <li class="item">Javascript</li>
+            <li class="item">TypeScript</li>        
+        </ul>
+        <script>
+            let items = document.getElementsByClassName('item');
+            items[0].innerHTML='Monday'
+            items[1].innerHTML='Tuesday'
+            items[2].innerHTML='Wednesday'
+            items[3].innerHTML='Thursday'
+            
+            console.log('item 0 is '+items[0])
+            </script>
+    </body>
+</html>

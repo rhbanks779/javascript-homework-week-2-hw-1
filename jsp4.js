@@ -118,3 +118,33 @@ while( i < word.length){
             console.log(word + " is not a palindrome");
         }*/
         
+        //Higher Order Functions
+        //common methods=map, filter, reduce, find, foreach
+       /* const numsArray = [2, 3, 7, 10, 45];
+
+        const newNumsArray=numsArray.map((num)/*iterating through each element)*/ //=> {
+        //return num * 2;
+        /*})
+        console.log(newNumsArray);
+        console.log(numsArray)//has not changed the original
+
+        const getSquares=[5, 22, 34, 66];
+        const newGetSquares= getSquares.map((num) =>{
+            return num * num;
+            //const getSquares= (arr) =>{
+                //return arr.map(x => x*x);
+                //console.log(getSquares([1, 2, 3, 4, 5])); 
+                //different, more clean way to do same problem
+            }
+        })
+        console.log(newGetSquares);
+        console.log(getSquares); */
+
+        //filter an array based on search criteria
+        const numbers=[1, 2, 3, 5, 8, 10, 34];
+//only return numbers >7
+    const newNumbers=numbers.filter((num)=> {
+     return num > 7
+    })
+    console.log(newNumbers)
+    console.log(numbers)
