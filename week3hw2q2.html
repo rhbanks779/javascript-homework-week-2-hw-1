@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Week3 HW2 question 2a/2b</title>
+<style>
+    body{
+        background-color: tan;
+    }
+</style>
+</head>
+<body>
+<h1>Question 2a/2b:</h1>
+<p>2a. Create a function called celsiusToFahrenheit:
+
+    - Take a Celsius temperature from the user and convert it to Fahrenheit
+    
+    - Return string as output: "SOMETHING degrees Celsius is Something degrees Fahrenheit"
+    <br>  
+    <br>       
+    2b. Create a function called fahrenheitToCelsius:
+    
+    - Now take a Fahrenheit temperature from the user and convert it to Celsius
+    
+    - Return string as output: "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"</p>
+<br>
+<br>
+    <p>Converting Celsius to Fahrenheit:</p>
+    <p id='temp1'></p>
+<br>
+<br>
+<p>Converting Fahrenheit to Celsius:</p>
+<p id='temp2'></p>
+    <script>
+let userTemp = Number(prompt("Please enter a Celsius temperature:"))
+
+function celsiusToFahrenheit(userTemp){
+    let fTemp = (userTemp*1.8)+32;
+    return userTemp + " degrees Celcius is " + fTemp + " degrees Fahrenheit.";
+}
+console.log(celsiusToFahrenheit(userTemp))
+document.getElementById('temp1').innerHTML=`${celsiusToFahrenheit(userTemp)}`;
+
+let userTemp2 = Number(prompt("Please enter a Fahrenheit temperature:"));
+
+function fahrenheitToCelsius(userTemp2){
+    let cTemp = (userTemp2 - 32)/ 1.8;
+    let cTemp2 = Math.trunc(cTemp)
+    return userTemp2 + " degrees Fahrenheit is " + cTemp2 + " degrees Celsius."
+}
+console.log(fahrenheitToCelsius(userTemp2))
+document.getElementById('temp2').innerHTML=`${fahrenheitToCelsius(userTemp2)}`;
+    </script>
+</body>
+</html>
