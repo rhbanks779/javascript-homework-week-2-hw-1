@@ -44,18 +44,18 @@ let prompt = require('prompt-sync')();
 
 //#3
 //let studentInput = prompt("Please enter your activity: ")
-const students = [{ name: 'Brad Boul', activity : ['swimming', 'soccer'], gender : 'Male' },
-             { name: 'Cal Hodges', activity : ['basketball', 'swimming'], gender: 'Male' },
-             { name: 'Jonathan Say', activity : ['soccer', 'volleyball', 'basketball'], gender: 'Male' },
-             { name: 'Mary Hill', activity: ['soccer', 'swimming'], gender : 'Female' },
-             { name: 'Rachel Smith', activity: ['basketball', 'volleyball', 'soccer'], gender: 'Female' },
-             { name: 'Lisa Carter', activity: ['soccer', 'basketball'], gender: 'Female'}]
+// const students = [{ name: 'Brad Boul', activity : ['swimming', 'soccer'], gender : 'Male' },
+//              { name: 'Cal Hodges', activity : ['basketball', 'swimming'], gender: 'Male' },
+//              { name: 'Jonathan Say', activity : ['soccer', 'volleyball', 'basketball'], gender: 'Male' },
+//              { name: 'Mary Hill', activity: ['soccer', 'swimming'], gender : 'Female' },
+//              { name: 'Rachel Smith', activity: ['basketball', 'volleyball', 'soccer'], gender: 'Female' },
+//              { name: 'Lisa Carter', activity: ['soccer', 'basketball'], gender: 'Female'}]
 
-const sports = students.find( ({activity})=> activity === 'swimming');
+// const sports = students.find( ({activity})=> activity === 'swimming');
 // function sports(sport){
 //     return sport.activity === 'swimming';
 // }
-console.log(sports);
+//console.log(sports);
 //     function studentGroup (student.map() => {   
 //             if (students.activity == 'swimming'){
 //              return students.name + student.activity + student.gender; 
@@ -76,4 +76,13 @@ console.log(sports);
     //      const studentGroup2=students.filter(sport=> (sport.activity.includes(studentInput)));
     //          console.log(studentGroup2)
          
-          
+      //Quesion 4=traverse through an array and display each value with inde position using array.map method
+      const myArray=[5, 6, 7, 'yes', 'no'];
+      
+      let travArray= myArray.map(function(element, index){
+          console.log(element);
+          console.log(index);
+          return element;
+          return index; 
+      })
+        
