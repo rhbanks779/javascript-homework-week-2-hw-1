@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<title>Week3HW2 Question3</title>
+<style>
+    body{
+        background-color: tomato;
+    }
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<body>
+<h1>Week 3 Homework 2 Question #3:</h1>
+
+<p>3. Create an array of at least five Student objects with the following properties: name, activity, gender
+
+    - Filter all those students who are into swimming
+    
+    - Filter all those students who are in the activity entered by the user. For example, if the user enters "Basketball" display only students with basketball as their activity 
+
+</p>
+<br>
+<br>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Activity</th>
+        <th>Gender</th>
+    </tr>
+    <tr>
+        <td>Brad Boul</td>
+        <td>swimming, soccer</td>
+        <td>Male</td>
+    </tr>
+    <tr>
+        <td>Cal Hodges</td>
+        <td>basketball, swimming</td>
+        <td>Male</td>
+        </tr>
+        <tr>
+            <td>Jonathan Say</td>
+            <td>soccer, volleyball, basketball</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Mary Hill</td>
+            <td>soccer, swimming</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Rachel Smith</td>
+            <td>basketball, volleyball, soccer</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Lisa Carter</td>
+            <td>soccer, basketball</td>
+            <td>Female</td>
+        </tr>
+</table>
+<p>These are the students involved in the activity you entered:</p>
+<ul id="studentSports"></ul>
+
+<br>
+<br>
+<p>These are the students whose activity is swimming:</p>
+<ul id="studentSwim"></ul>
+
+<script>
+     let studentInput = prompt("Please enter your activity: ")
+
+const students = [{ name: 'Brad Boul', activity : ['swimming', 'soccer'], gender : 'Male' },
+             { name: 'Cal Hodges', activity : ['basketball', 'swimming'], gender: 'Male' },
+             { name: 'Jonathan Say', activity : ['soccer', 'volleyball', 'basketball'], gender: 'Male' },
+             { name: 'Mary Hill', activity: ['soccer', 'swimming'], gender : 'Female' },
+             { name: 'Rachel Smith', activity: ['basketball', 'volleyball', 'soccer'], gender: 'Female' },
+             { name: 'Lisa Carter', activity: ['soccer', 'basketball'], gender: 'Female'}]
+
+const studentGroup = students.filter(sport => (sport.activity.includes('swimming')));
+    console.log(studentGroup);
+ 
+document.getElementById(studentSwim).innerHTML=`${studentGroup(students)}`;
+
+ const studentGroup2 = students.filter(sport=> (sport.activity.includes(studentInput)));
+     console.log(studentGroup2)
+
+document.getElementById(studentSports).innerHTML=`${studentGroup2(studentInput)}`;
+
+</script>
+
+</body>
+
+</html>
